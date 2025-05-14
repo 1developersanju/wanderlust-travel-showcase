@@ -1,13 +1,13 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Airplane, Car, Map, Briefcase, Globe, Ship } from "lucide-react";
+import { Airplay, Car, Map, Briefcase, Globe, Ship } from "lucide-react";
 
 const services = [
   {
     title: "Airport Transfers",
     description: "Reliable airport pick-ups and drop-offs with flight monitoring and wait time included.",
-    icon: Airplane
+    icon: Airplay
   },
   {
     title: "Corporate Travel",

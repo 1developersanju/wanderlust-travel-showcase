@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Car, Bus, Ship, Airplane } from "lucide-react";
+import { Car, Bus, Ship, Airplay } from "lucide-react";
 
 const vehicles = [
   {
@@ -25,7 +25,7 @@ const vehicles = [
   },
   {
     name: "VIP Travel Options",
-    icon: Airplane,
+    icon: Airplay,
     description: "Premium charter services for discerning clients. Private jets and yacht arrangements available.",
     image: "https://images.unsplash.com/photo-1452378174528-3090a4bba7b2?auto=format&fit=crop&q=80&w=600"
   }
