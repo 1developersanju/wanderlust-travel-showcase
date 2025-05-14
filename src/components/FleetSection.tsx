@@ -2,32 +2,32 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Car, Bus, Ship, Airplay } from "lucide-react";
+import { Car, Bus, Airplay, Globe } from "lucide-react";
 
 const vehicles = [
   {
     name: "Executive Sedan",
     icon: Car,
     description: "Luxury sedan perfect for business travel and airport transfers. Comfortable seating for up to 3 passengers.",
-    image: "https://images.unsplash.com/photo-1529369623266-f5264b696110?auto=format&fit=crop&q=80&w=600"
+    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=600"
   },
   {
     name: "Premium SUV",
     icon: Car,
     description: "Spacious SUVs ideal for small groups and families. Comfortable seating for up to 6 passengers with luggage.",
-    image: "https://images.unsplash.com/photo-1627059245237-046a8002631c?auto=format&fit=crop&q=80&w=600"
+    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=600"
   },
   {
     name: "Luxury Coach",
     icon: Bus,
     description: "High-end coaches for large groups. Modern amenities with seating for up to 50 passengers.",
-    image: "https://images.unsplash.com/photo-1627734819947-908940ac5f37?auto=format&fit=crop&q=80&w=600"
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=600"
   },
   {
-    name: "VIP Travel Options",
-    icon: Airplay,
-    description: "Premium charter services for discerning clients. Private jets and yacht arrangements available.",
-    image: "https://images.unsplash.com/photo-1517026575980-3e1e2dedeab4?auto=format&fit=crop&q=80&w=600"
+    name: "Heritage Tours",
+    icon: Globe,
+    description: "Exclusive guided tours to India's most iconic landmarks with premium transportation and expert guides.",
+    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&q=80&w=600"
   }
 ];
 
@@ -37,12 +37,12 @@ const FleetSection = () => {
       <div className="container mx-auto px-4">
         <h2 className="section-heading text-center">Our Premium Fleet</h2>
         <p className="section-subheading text-center">
-          Discover our range of luxury vehicles available for your transportation needs
+          Discover our range of luxury vehicles available for your transportation needs across India
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {vehicles.map((vehicle, index) => (
-            <Card key={index} className="vehicle-card border-none overflow-hidden bg-white">
+            <Card key={index} className="vehicle-card border-none overflow-hidden bg-white hover:shadow-2xl transition-all duration-500">
               <div className="h-48 overflow-hidden">
                 <img 
                   src={vehicle.image} 

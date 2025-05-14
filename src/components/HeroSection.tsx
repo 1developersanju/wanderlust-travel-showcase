@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section id="home" className="relative h-screen flex items-center">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80')] bg-cover bg-center">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80')] bg-cover bg-center">
         <div className="absolute inset-0 bg-navy/60"></div>
       </div>
       
@@ -16,7 +16,7 @@ const HeroSection = () => {
           Luxury Transportation <span className="text-gold">Services</span>
         </h1>
         <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-8 animate-fade-in" style={{animationDelay: "0.2s"}}>
-          Experience premium travel with our exceptional fleet of vehicles and professional chauffeurs.
+          Experience premium travel across India with our exceptional fleet of vehicles and professional chauffeurs.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
           <Button size="lg" className="bg-gold hover:bg-gold/90 text-white text-lg px-8">

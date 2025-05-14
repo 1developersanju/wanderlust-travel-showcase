@@ -9,10 +9,10 @@ const AboutSection = () => {
           <div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-gold">About Our Agency</h2>
             <p className="text-lg mb-6 text-white/80">
-              With over 15 years of experience in the luxury transportation industry, our agency has built a reputation for excellence and reliability. We pride ourselves on providing exceptional service to our clients, ensuring their travel experiences are comfortable, safe, and memorable.
+              With over 15 years of experience in the luxury transportation industry across India, our agency has built a reputation for excellence and reliability. We pride ourselves on providing exceptional service to our clients, ensuring their travel experiences are comfortable, safe, and memorable.
             </p>
             <p className="text-lg mb-6 text-white/80">
-              Our team of professional chauffeurs are rigorously trained and committed to delivering the highest standards of service. We maintain a diverse fleet of premium vehicles that are regularly serviced and kept in pristine condition.
+              Our team of professional chauffeurs are rigorously trained and committed to delivering the highest standards of service. We maintain a diverse fleet of premium vehicles that are regularly serviced and kept in pristine condition to meet the demanding roads of India.
             </p>
             
             <div className="grid grid-cols-2 gap-6 mt-10">
@@ -38,7 +38,7 @@ const AboutSection = () => {
           <div className="relative">
             <div className="rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1561361058-c24c670f0e97?auto=format&fit=crop&q=80&w=800" 
+                src="https://images.unsplash.com/photo-1596338297185-d108a96c222d?auto=format&fit=crop&q=80&w=800" 
                 alt="About Our Agency"
                 className="w-full h-full object-cover"
               />
