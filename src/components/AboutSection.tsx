@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const AboutSection = () => {
   return (
@@ -37,11 +38,13 @@ const AboutSection = () => {
           
           <div className="relative">
             <div className="rounded-lg overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1596338297185-d108a96c222d?auto=format&fit=crop&q=80&w=800" 
-                alt="About Our Agency"
-                className="w-full h-full object-cover"
-              />
+              <AspectRatio ratio={4/3} className="bg-muted">
+                <img 
+                  src="https://images.unsplash.com/photo-1625234900985-e6fcaa52c342?q=80&w=2940&auto=format&fit=crop"
+                  alt="Professional chauffeur with luxury car in India"
+                  className="w-full h-full object-cover animate-fade-in"
+                />
+              </AspectRatio>
             </div>
             <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-gold rounded-lg -z-10"></div>
             <div className="absolute -top-6 -right-6 w-48 h-48 border-2 border-gold rounded-lg -z-10"></div>
