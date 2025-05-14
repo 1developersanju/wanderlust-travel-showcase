@@ -38,7 +38,7 @@ const AboutSection = () => {
           <div className="relative">
             <div className="rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1487252665478-49b61b47f302?auto=format&fit=crop&q=80&w=800" 
+                src="https://images.unsplash.com/photo-1561361058-c24c670f0e97?auto=format&fit=crop&q=80&w=800" 
                 alt="About Our Agency"
                 className="w-full h-full object-cover"
               />

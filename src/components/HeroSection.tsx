@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section id="home" className="relative h-screen flex items-center">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1469041797191-50ace28483c3?auto=format&fit=crop&q=80')] bg-cover bg-center">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80')] bg-cover bg-center">
         <div className="absolute inset-0 bg-navy/60"></div>
       </div>
       

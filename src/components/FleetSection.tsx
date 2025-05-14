@@ -9,25 +9,25 @@ const vehicles = [
     name: "Executive Sedan",
     icon: Car,
     description: "Luxury sedan perfect for business travel and airport transfers. Comfortable seating for up to 3 passengers.",
-    image: "https://images.unsplash.com/photo-1469041797191-50ace28483c3?auto=format&fit=crop&q=80&w=600"
+    image: "https://images.unsplash.com/photo-1529369623266-f5264b696110?auto=format&fit=crop&q=80&w=600"
   },
   {
     name: "Premium SUV",
     icon: Car,
     description: "Spacious SUVs ideal for small groups and families. Comfortable seating for up to 6 passengers with luggage.",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&q=80&w=600"
+    image: "https://images.unsplash.com/photo-1627059245237-046a8002631c?auto=format&fit=crop&q=80&w=600"
   },
   {
     name: "Luxury Coach",
     icon: Bus,
     description: "High-end coaches for large groups. Modern amenities with seating for up to 50 passengers.",
-    image: "https://images.unsplash.com/photo-1466721591366-2d5fba72006d?auto=format&fit=crop&q=80&w=600"
+    image: "https://images.unsplash.com/photo-1627734819947-908940ac5f37?auto=format&fit=crop&q=80&w=600"
   },
   {
     name: "VIP Travel Options",
     icon: Airplay,
     description: "Premium charter services for discerning clients. Private jets and yacht arrangements available.",
-    image: "https://images.unsplash.com/photo-1452378174528-3090a4bba7b2?auto=format&fit=crop&q=80&w=600"
+    image: "https://images.unsplash.com/photo-1517026575980-3e1e2dedeab4?auto=format&fit=crop&q=80&w=600"
   }
 ];
 
