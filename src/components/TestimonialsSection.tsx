@@ -7,7 +7,7 @@ const testimonials = [
     name: "Priya ",
     role: "Wedding Client",
     content: "Lee Travels made our wedding transportation hassle-free. Their team was punctual, professional, and ensured all our guests reached the venue comfortably.",
-    image: "https://media.istockphoto.com/id/1254176393/photo/portrait-of-a-happy-woman-of-indian-ethnicity.jpg?s=2048x2048&w=is&k=20&c=OhAXG2Gn8pnFuY0a34DzYezhVTHoshdQmBBUQBhIUmw="
+    image: "https://media.istockphoto.com/id/1254176393/photo/portrait-of-a-happy-woman-of-indian-ethnicity.webp?a=1&b=1&s=612x612&w=0&k=20&c=5tV5kxWRbkMc8QZZuZolnNPb1alrl_rOjho2n8rJayM="
   },
   {
     name: "Arjun ",
