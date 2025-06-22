@@ -31,7 +31,12 @@ const HeroSection = () => {
               <Button 
                 size="lg"
                 className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white px-6 sm:px-8 py-4 sm:py-5 lg:py-6 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-base sm:text-lg font-medium min-h-[48px] sm:min-h-[56px]"
-                onClick={() => document.getElementById('fleet')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  const element = document.getElementById('fleet');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 Explore Our Fleet
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />

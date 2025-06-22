@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, MessageCircle } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'Fleet', href: '#fleet' },
-  { name: 'Packages', href: '#packages' },
-  { name: 'Services', href: '#services' },
-  { name: 'About', href: '#about' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '/', isRoute: true },
+  { name: 'Fleet', href: '#fleet', isRoute: false },
+  { name: 'Packages', href: '#packages', isRoute: false },
+  { name: 'Services', href: '#services', isRoute: false },
+  { name: 'About', href: '#about', isRoute: false },
+  { name: 'Gallery', href: '/gallery', isRoute: true },
+  { name: 'Contact', href: '#contact', isRoute: false },
 ];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,31 +26,64 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavigation = (item: typeof navigation[0]) => {
+    if (item.isRoute) {
+      // For route navigation, React Router will handle it
+      return;
+    } else {
+      // For section navigation, check if we're on the home page
+      if (location.pathname !== '/') {
+        // If not on home page, navigate to home first, then scroll to section
+        window.location.href = `/${item.href}`;
+      } else {
+        // If on home page, scroll to section
+        const element = document.querySelector(item.href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  };
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6">
         <div className="relative flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className={`text-2xl font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>
+            <Link to="/" className={`text-2xl font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>
               Lee Travels
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className={`text-sm font-medium transition-colors duration-300 ${
-                  isScrolled 
-                    ? 'text-gray-600 hover:text-primary' 
-                    : 'text-gray-200 hover:text-white'
-                }`}
-              >
-                {item.name}
-              </a>
+              item.isRoute ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`text-sm font-medium transition-colors duration-300 ${
+                    isScrolled 
+                      ? 'text-gray-600 hover:text-primary' 
+                      : 'text-gray-200 hover:text-white'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavigation(item)}
+                  className={`text-sm font-medium transition-colors duration-300 ${
+                    isScrolled 
+                      ? 'text-gray-600 hover:text-primary' 
+                      : 'text-gray-200 hover:text-white'
+                  }`}
+                >
+                  {item.name}
+                </button>
+              )
             ))}
             <a 
               href="https://wa.me/+917397080671" 
@@ -85,14 +121,27 @@ const Navbar = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white/90 backdrop-blur-md rounded-lg shadow-lg">
               {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.isRoute ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.name}
+                    onClick={() => {
+                      handleNavigation(item);
+                      setIsMenuOpen(false);
+                    }}
+                    className="block w-full text-left px-3 py-2 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 rounded-md"
+                  >
+                    {item.name}
+                  </button>
+                )
               ))}
               <div className="px-3 py-2">
                 <a 
