@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious
 } from "@/components/ui/carousel";
+import CardAnimation from "@/components/ui/card-animation";
 
 const vehicles = [
   {
@@ -62,36 +63,45 @@ const vehicles = [
 ];
 
 const VehicleCard = ({ vehicle, index }) => (
-  <Card 
-    key={index} 
-    className="vehicle-card border-none overflow-hidden bg-white rounded-lg shadow-md hover:shadow-2xl transition-all duration-500 group h-full"
-  >
-    <div className="h-56 overflow-hidden relative">
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-      <img 
-        src={vehicle.image} 
-        alt={vehicle.name}
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-      />
-    </div>
-    <CardContent className="p-6 relative">
-      <div className="absolute -top-7 left-6 bg-primary rounded-full p-3 shadow-lg">
-        <vehicle.icon className="h-6 w-6 text-white" />
+  <CardAnimation index={index}>
+    <Card 
+      key={index} 
+      className="vehicle-card border-none overflow-hidden bg-white rounded-lg shadow-md hover:shadow-2xl transition-all duration-500 group h-full"
+    >
+      <div className="h-56 overflow-hidden relative">
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+        <img 
+          src={vehicle.image} 
+          alt={vehicle.name}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
       </div>
-      <div className="pt-4">
-        <h3 className="font-semibold text-xl text-primary mb-3">{vehicle.name}</h3>
-        <p className="text-muted-foreground mb-5 leading-relaxed">
-          {vehicle.description}
-        </p>
-        <Button 
-          variant="outline" 
-          className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md"
-        >
-          Book Now
-        </Button>
-      </div>
-    </CardContent>
-  </Card>
+      <CardContent className="p-6 relative">
+        <div className="absolute -top-7 left-6 bg-primary rounded-full p-3 shadow-lg">
+          <vehicle.icon className="h-6 w-6 text-white" />
+        </div>
+        <div className="pt-4">
+          <h3 className="font-semibold text-xl text-primary mb-3">{vehicle.name}</h3>
+          <p className="text-muted-foreground mb-5 leading-relaxed">
+            {vehicle.description}
+          </p>
+          <a 
+            href={`https://wa.me/+917373555444?text=Hi, I'm interested in booking the ${vehicle.name} for my travel. Could you please provide pricing and availability details?`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full"
+          >
+            <Button 
+              variant="outline" 
+              className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md"
+            >
+              Book Now
+            </Button>
+          </a>
+        </div>
+      </CardContent>
+    </Card>
+  </CardAnimation>
 );
 
 const FleetSection = () => {

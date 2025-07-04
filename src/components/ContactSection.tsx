@@ -13,20 +13,20 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: "+91 98765 43210",
-    link: "tel:+917397080671"
+    details: "+91 73735 55444",
+    link: "tel:+917373555444"
   },
   {
     icon: Mail,
     title: "Email",
-    details: "contact@leetravels.com",
-    link: "mailto:contact@leetravels.com"
+    details: "praveen.leetravels@gmail.com",
+    link: "mailto:praveen.leetravels@gmail.com"
   },
   {
     icon: MapPin,
     title: "Location",
-    details: "Coimbatore, Tamil Nadu",
-    link: "https://goo.gl/maps/maps/place/Coimbatore,+Tamil+Nadu/@11.0141263,76.8848337"
+    details: "1042, cycle mansion, 5th street, Near Ganapathi silks, Gandhipuram, Cbe 12",
+    link: "https://maps.google.com/maps?q=11.01704216003418%2C76.96725463867188&z=17&hl=en"
   },
   {
     icon: Clock,
@@ -43,7 +43,7 @@ const ContactSection = () => {
         <div className="text-center mb-16">
           <h2 className="section-heading">Get in Touch</h2>
           <p className="section-subheading">
-            Contact us for inquiries about our travel services and packages
+            Contact us for inquiries about our travel services
           </p>
         </div>
 
@@ -56,16 +56,16 @@ const ContactSection = () => {
                   <CardContent className="p-6">
                     <a 
                       href={info.link}
-                      className="flex items-start space-x-4"
+                      className="flex items-start space-x-4 group"
                       target={info.icon === Mail ? "_blank" : "_self"}
                       rel="noopener noreferrer"
                     >
-                      <div className="bg-primary/10 p-3 rounded-lg">
+                      <div className="bg-primary/10 p-3 rounded-lg flex-shrink-0">
                         <info.icon className="h-6 w-6 text-primary" />
                       </div>
-                      <div>
-                        <h3 className="font-semibold text-lg mb-1">{info.title}</h3>
-                        <p className="text-muted-foreground">{info.details}</p>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="font-semibold text-lg mb-1 text-gray-900 group-hover:text-primary transition-colors duration-300">{info.title}</h3>
+                        <p className="text-muted-foreground text-sm sm:text-base break-words leading-relaxed">{info.details}</p>
                       </div>
                     </a>
                   </CardContent>
@@ -79,7 +79,7 @@ const ContactSection = () => {
                 Get instant responses through WhatsApp for any queries about our services.
               </p>
               <a 
-                href="https://wa.me/+917397080671?text=Hi, I would like to know more about your travel services."
+                href="https://wa.me/+917373555444?text=Hi, I would like to know more about your travel services."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -95,7 +95,7 @@ const ContactSection = () => {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.7376535397517!2d76.99062937460235!3d11.078505089111744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f7f3acac092f%3A0x9947b0b9b7dd3baf!2sSaravanampatti%2C%20Coimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1707297198403!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.7376535397517!2d76.96944337460235!3d11.01704216003418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f7f3acac092f%3A0x9947b0b9b7dd3baf!2sGandhipuram%2C%20Coimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1707297198403!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -119,22 +119,37 @@ const ContactSection = () => {
 
         {/* Operating Hours */}
         <div className="mt-24 text-center">
-          <Card className="border-none shadow-lg max-w-2xl mx-auto">
+          <Card className="border-none shadow-lg max-w-3xl mx-auto">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold mb-6">Operating Hours</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 rounded-lg bg-primary/5">
-                  <h4 className="font-medium mb-2">Weekdays</h4>
-                  <p className="text-muted-foreground">24/7 Available</p>
+              <div className="flex items-center justify-center mb-6">
+                <div className="bg-primary/10 p-4 rounded-full mr-4">
+                  <Clock className="h-8 w-8 text-primary" />
                 </div>
-                <div className="p-4 rounded-lg bg-primary/5">
-                  <h4 className="font-medium mb-2">Weekends</h4>
-                  <p className="text-muted-foreground">24/7 Available</p>
+                <h3 className="text-3xl font-bold text-primary">24/7 Available</h3>
+              </div>
+              <h4 className="text-xl font-semibold mb-4">Round the Clock Service</h4>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                We understand that travel needs don't follow a schedule. That's why our customer support team is available 24 hours a day, 7 days a week to assist you with bookings, inquiries, and emergency support.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+                <div className="p-4 rounded-lg bg-primary/5 border border-primary/10">
+                  <div className="text-2xl font-bold text-primary mb-1">24</div>
+                  <div className="text-sm text-muted-foreground">Hours</div>
+                </div>
+                <div className="p-4 rounded-lg bg-primary/5 border border-primary/10">
+                  <div className="text-2xl font-bold text-primary mb-1">7</div>
+                  <div className="text-sm text-muted-foreground">Days</div>
+                </div>
+                <div className="p-4 rounded-lg bg-primary/5 border border-primary/10">
+                  <div className="text-2xl font-bold text-primary mb-1">365</div>
+                  <div className="text-sm text-muted-foreground">Days/Year</div>
                 </div>
               </div>
-              <p className="mt-6 text-muted-foreground">
-                Our customer support team is available round the clock to assist you
-              </p>
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <p className="text-sm text-muted-foreground">
+                  Emergency support • Instant bookings • Travel assistance • Route guidance
+                </p>
+              </div>
             </CardContent>
           </Card>
         </div>

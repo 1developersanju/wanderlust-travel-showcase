@@ -1,5 +1,4 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -10,20 +9,43 @@ const Footer = () => {
           <div>
             <h2 className="text-3xl font-bold mb-2">Lee Travels</h2>
             <p className="text-white/70 max-w-md">Your trusted travel partner across South India</p>
-            <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">
-                <Twitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">
-                <Youtube className="h-6 w-6" />
-              </a>
-            </div>
+          </div>
+
+          {/* Popular Routes */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Popular Routes</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">Pondicherry</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">Rameswaram</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">Salem</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">Thekkady</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">Tirupati</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">Wayanad</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">Valparai</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">Yercaud</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">Trichy</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">Trivandrum</a>
+              </li>
+            </ul>
           </div>
 
           {/* Quick Links */}
@@ -37,7 +59,7 @@ const Footer = () => {
                 <a href="#fleet" className="text-white/70 hover:text-white transition-colors duration-300">Our Fleet</a>
               </li>
               <li>
-                <a href="#packages" className="text-white/70 hover:text-white transition-colors duration-300">Packages</a>
+                <a href="#services" className="text-white/70 hover:text-white transition-colors duration-300">Services</a>
               </li>
               <li>
                 <a href="#testimonials" className="text-white/70 hover:text-white transition-colors duration-300">Testimonials</a>
@@ -51,36 +73,25 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-2">
-              <li className="text-white/70">Tour Packages</li>
-              <li className="text-white/70">Marriage Events</li>
-              <li className="text-white/70">Business Travel</li>
-              <li className="text-white/70">Student Tours</li>
-              <li className="text-white/70">Hotel Bookings</li>
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <div className="space-y-4">
               <div>
                 <p className="font-medium">Address:</p>
-                <p className="text-white/70">
-                  Lee Travels<br />
-                  South India
+                <p className="text-white/70 break-words leading-relaxed">
+                  1042, cycle mansion, 5th street<br />
+                  Near Ganapathi silks<br />
+                  Gandhipuram, Cbe 12
                 </p>
               </div>
               <div>
                 <p className="font-medium">Phone:</p>
-                <p className="text-white/70">+91 98765 43210</p>
+                <p className="text-white/70">+91 73735 55444</p>
               </div>
               <div>
                 <p className="font-medium">Email:</p>
-                <span className="text-white/70">contact@leetravels.com</span>
+                <p className="text-white/70 break-words leading-relaxed">praveen.leetravels@gmail.com</p>
               </div>
             </div>
           </div>

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, MessageCircle } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const navigation = [
-  { name: 'Home', href: '/', isRoute: true },
   { name: 'Fleet', href: '#fleet', isRoute: false },
-  { name: 'Packages', href: '#packages', isRoute: false },
   { name: 'Services', href: '#services', isRoute: false },
   { name: 'About', href: '#about', isRoute: false },
   { name: 'Gallery', href: '/gallery', isRoute: true },
@@ -17,6 +15,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +33,14 @@ const Navbar = () => {
       // For section navigation, check if we're on the home page
       if (location.pathname !== '/') {
         // If not on home page, navigate to home first, then scroll to section
-        window.location.href = `/${item.href}`;
+        navigate('/');
+        // Use setTimeout to ensure navigation completes before scrolling
+        setTimeout(() => {
+          const element = document.querySelector(item.href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
       } else {
         // If on home page, scroll to section
         const element = document.querySelector(item.href);
@@ -86,7 +92,7 @@ const Navbar = () => {
               )
             ))}
             <a 
-              href="https://wa.me/+917397080671" 
+              href="https://wa.me/+917373555444" 
               target="_blank" 
               rel="noopener noreferrer"
             >
@@ -145,7 +151,7 @@ const Navbar = () => {
               ))}
               <div className="px-3 py-2">
                 <a 
-                  href="https://wa.me/+917397080671" 
+                  href="https://wa.me/+917373555444" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block w-full"

@@ -1,14 +1,75 @@
+# Lee Travels - Taxi Service Robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Allow all routes pages
+Allow: /routes/
+Allow: /fleet/
+
+# Main sitemap
+Sitemap: https://leetravels.cbe.taxi/sitemap.xml
+
+# Important routes for SEO
+Allow: /routes/coimbatore-to-pondicherry-taxi
+Allow: /routes/coimbatore-to-rameswaram-taxi
+Allow: /routes/coimbatore-to-salem-taxi
+Allow: /routes/coimbatore-to-tanjore-taxi
+Allow: /routes/coimbatore-to-thekkady-taxi
+Allow: /routes/coimbatore-to-tiruchendur-taxi
+Allow: /routes/coimbatore-to-tirupati-taxi
+Allow: /routes/coimbatore-to-trichy-airport-taxi
+Allow: /routes/coimbatore-to-trichy-taxi
+Allow: /routes/coimbatore-to-trivandrum-taxi
+Allow: /routes/coimbatore-to-vagamon-taxi
+Allow: /routes/coimbatore-to-valparai-taxi
+Allow: /routes/coimbatore-to-wayanad-taxi
+Allow: /routes/coimbatore-to-yercaud-taxi
+
+# Vehicle types
+Allow: /fleet/innova-crysta
+Allow: /fleet/toyota-etios
+Allow: /fleet/swift-dzire
+Allow: /fleet/tempo-traveller
+Allow: /fleet/ac-coach
+Allow: /fleet/swaraj-mazda
+
+# Crawl-delay: Be nice to our server
+Crawl-delay: 1
+
+# Specific rules for major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Social media bots
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
+
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+
+# Host
+Host: https://leetravels.cbe.taxi
